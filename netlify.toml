@@ -1,0 +1,31 @@
+[build]
+  publish = "."
+
+# Security headers pre všetky stránky
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    X-XSS-Protection = "1; mode=block"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+
+# Cache — obrázky (1 rok, immutable)
+[[headers]]
+  for = "/images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Cache — HTML (vždy čerstvé)
+[[headers]]
+  for = "/index.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+# Redirect: HTTP → HTTPS + non-www → www
+[[redirects]]
+  from = "https://trenerbratislava.sk/*"
+  to = "https://www.trenerbratislava.sk/:splat"
+  status = 301
+  force = true
