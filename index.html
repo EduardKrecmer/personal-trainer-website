@@ -3,6 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="dark light">
+  <meta name="theme-color" content="#1a2619">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Jakub Boško — Tréner">
 
   <!-- ★ SEO: Primary meta -->
   <title>Osobný tréner Bratislava | Jakub Boško — Silový tréning na mieru</title>
@@ -17,8 +23,8 @@
   <meta name="geo.position" content="48.148598;17.107748">
   <meta name="ICBM" content="48.148598, 17.107748">
 
-  <!-- ★ SEO: Canonical -->
-  <link rel="canonical" href="https://www.trenerbratislava.sk">
+  <!-- ★ SEO: Canonical — s trailing slash, konzistentné so sitemap -->
+  <link rel="canonical" href="https://www.trenerbratislava.sk/">
 
   <!-- ★ SEO: Open Graph / Facebook -->
   <meta property="og:type" content="website">
@@ -26,42 +32,86 @@
   <meta property="og:title" content="Osobný tréner Bratislava | Jakub Boško — Silový tréning na mieru">
   <meta property="og:description" content="Individuálny silový tréning v Bratislave pre začiatočníkov aj pokročilých. Prvá konzultácia zdarma — bez záväzkov.">
   <meta property="og:site_name" content="Jakub Boško — Osobný tréner Bratislava">
-  <meta property="og:url" content="https://www.trenerbratislava.sk">
-  <meta property="og:image" content="https://www.trenerbratislava.sk/og-image.jpg">
+  <meta property="og:url" content="https://www.trenerbratislava.sk/">
+  <meta property="og:image" content="https://www.trenerbratislava.sk/images/og-image.jpg">
+  <meta property="og:image:secure_url" content="https://www.trenerbratislava.sk/images/og-image.jpg">
+  <meta property="og:image:type" content="image/jpeg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Jakub Boško — Osobný tréner Bratislava">
 
   <!-- ★ SEO: Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Osobný tréner Bratislava | Jakub Boško">
   <meta name="twitter:description" content="Individuálny silový tréning v Bratislave. Prvá konzultácia zdarma.">
-  <meta name="twitter:image" content="https://www.trenerbratislava.sk/og-image.jpg">
+  <meta name="twitter:image" content="https://www.trenerbratislava.sk/images/og-image.jpg">
+  <meta name="twitter:image:alt" content="Jakub Boško — Osobný tréner Bratislava">
 
   <!-- Favicon — SVG inline, žiadne externé súbory -->
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%231a2619'/><text x='16' y='23' text-anchor='middle' font-family='Georgia,serif' font-size='17' font-weight='600' fill='%23c19a5b'>JB</text></svg>">
   <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%231a2619'/><text x='16' y='23' text-anchor='middle' font-family='Georgia,serif' font-size='17' font-weight='600' fill='%23c19a5b'>JB</text></svg>">
 
-  <!-- Google Fonts — preconnect + neblokujúce načítanie + font-display: swap -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet"></noscript>
+  <!-- Self-hosted fonty — žiadne externé DNS lookup, okamžité načítanie -->
+  <!-- Preload kritických fontov (nad záhybom: headings + body) -->
+  <link rel="preload" href="/fonts/cormorant-garamond-600-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/dm-sans-400-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/dm-sans-500-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/fonts/fonts.css">
 
-  <!-- ★ SEO: Structured Data — LocalBusiness + Person + FAQ -->
+  <!-- ★ SEO: Structured Data — WebSite + WebPage + LocalBusiness + Person + Review + FAQ -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@graph": [
+
+      {
+        "@type": "WebSite",
+        "@id": "https://www.trenerbratislava.sk/#website",
+        "name": "Jakub Boško — Osobný tréner Bratislava",
+        "url": "https://www.trenerbratislava.sk/",
+        "inLanguage": "sk-SK",
+        "publisher": { "@id": "https://www.trenerbratislava.sk/#business" }
+      },
+
+      {
+        "@type": "WebPage",
+        "@id": "https://www.trenerbratislava.sk/#webpage",
+        "name": "Osobný tréner Bratislava | Jakub Boško — Silový tréning na mieru",
+        "description": "Individuálny silový tréning v Bratislave pre začiatočníkov aj pokročilých. Prvá konzultácia zdarma.",
+        "url": "https://www.trenerbratislava.sk/",
+        "inLanguage": "sk-SK",
+        "isPartOf": { "@id": "https://www.trenerbratislava.sk/#website" },
+        "about": { "@id": "https://www.trenerbratislava.sk/#business" },
+        "author": { "@id": "https://www.trenerbratislava.sk/#trainer" },
+        "datePublished": "2026-03-20",
+        "dateModified": "2026-04-04",
+        "primaryImageOfPage": {
+          "@type": "ImageObject",
+          "url": "https://www.trenerbratislava.sk/images/og-image.jpg",
+          "width": 1200,
+          "height": 630
+        }
+      },
+
       {
         "@type": ["LocalBusiness", "HealthClub"],
         "@id": "https://www.trenerbratislava.sk/#business",
         "name": "Jakub Boško — Osobný tréner Bratislava",
         "alternateName": ["Osobný tréner Bratislava", "Silový tréning Bratislava", "Fitness tréner Bratislava"],
         "description": "Individuálny silový tréning v Bratislave na mieru pre začiatočníkov aj pokročilých. Prvá konzultácia zdarma.",
-        "url": "https://www.trenerbratislava.sk",
+        "url": "https://www.trenerbratislava.sk/",
         "telephone": "+421950490512",
         "priceRange": "$$",
         "currenciesAccepted": "EUR",
+        "paymentAccepted": "Hotovosť, Bankový prevod",
+        "image": "https://www.trenerbratislava.sk/images/og-image.jpg",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.trenerbratislava.sk/images/og-image.jpg",
+          "width": 1200,
+          "height": 630
+        },
+        "founder": { "@id": "https://www.trenerbratislava.sk/#trainer" },
         "areaServed": {
           "@type": "City",
           "name": "Bratislava",
@@ -78,6 +128,57 @@
           "latitude": "48.148598",
           "longitude": "17.107748"
         },
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+            "opens": "06:00",
+            "closes": "22:00"
+          }
+        ],
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "5",
+          "bestRating": "5",
+          "worstRating": "1",
+          "ratingCount": "3",
+          "reviewCount": "3"
+        },
+        "review": [
+          {
+            "@type": "Review",
+            "author": { "@type": "Person", "name": "Tomáš K." },
+            "reviewRating": {
+              "@type": "Rating",
+              "ratingValue": "5",
+              "bestRating": "5"
+            },
+            "reviewBody": "Bál som sa, že budem mimo. Jakub vysvetlil každý cvik, nikam sa neponáhľal. Za štyri mesiace vidím výsledky, ktoré som nečakal.",
+            "datePublished": "2025-12-10"
+          },
+          {
+            "@type": "Review",
+            "author": { "@type": "Person", "name": "Lucia M." },
+            "reviewRating": {
+              "@type": "Rating",
+              "ratingValue": "5",
+              "bestRating": "5"
+            },
+            "reviewBody": "Rok som stagnovala a menila programy. Za tri mesiace s Jakubom nové maximum na drep — a konečne viem prečo.",
+            "datePublished": "2026-01-08"
+          },
+          {
+            "@type": "Review",
+            "author": { "@type": "Person", "name": "Jana R." },
+            "reviewRating": {
+              "@type": "Rating",
+              "ratingValue": "5",
+              "bestRating": "5"
+            },
+            "reviewBody": "Chcela som schudnúť, nie len cvičiť. Jakub nastavil tréning aj stravu — za päť mesiacov mínus 9 kíl a postava, akú som nikdy nemala.",
+            "datePublished": "2026-02-14"
+          }
+        ],
         "sameAs": [
           "https://www.instagram.com/jakupos/"
         ],
@@ -164,19 +265,25 @@
           "kondičný tréner Bratislava"
         ]
       },
+
       {
         "@type": "Person",
         "@id": "https://www.trenerbratislava.sk/#trainer",
         "name": "Jakub Boško",
+        "givenName": "Jakub",
+        "familyName": "Boško",
         "jobTitle": "Osobný tréner",
         "description": "Certifikovaný osobný tréner v Bratislave so 5+ rokmi praxe. Špecializácia na silový tréning, prácu s začiatočníkmi a postupný dlhodobý progres.",
+        "url": "https://www.trenerbratislava.sk/",
+        "telephone": "+421950490512",
+        "image": "https://www.trenerbratislava.sk/images/og-image.jpg",
         "worksFor": { "@id": "https://www.trenerbratislava.sk/#business" },
-        "areaServed": "Bratislava",
         "sameAs": ["https://www.instagram.com/jakupos/"],
         "knowsAbout": [
           "silový tréning", "fyziológia", "periodizácia", "progresívna záťaž", "korekcia techniky"
         ]
       },
+
       {
         "@type": "FAQPage",
         "mainEntity": [
@@ -261,16 +368,8 @@
             }
           }
         ]
-      },
-      {
-        "@type": "WebPage",
-        "@id": "https://www.trenerbratislava.sk/#webpage",
-        "name": "Osobný tréner Bratislava | Jakub Boško — Silový tréning na mieru",
-        "description": "Individuálny silový tréning v Bratislave pre začiatočníkov aj pokročilých. Prvá konzultácia zdarma.",
-        "inLanguage": "sk-SK",
-        "about": { "@id": "https://www.trenerbratislava.sk/#business" },
-        "isPartOf": { "@id": "https://www.trenerbratislava.sk/#business" }
       }
+
     ]
   }
   </script>
@@ -396,6 +495,40 @@
     .reveal-delay-2 { transition-delay: 0.2s; }
     .reveal-delay-3 { transition-delay: 0.3s; }
     .reveal-delay-4 { transition-delay: 0.4s; }
+
+    /* Screen-reader only — visually hidden but accessible */
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    /* Skip-to-content — pre keyboard navigáciu */
+    .skip-link {
+      position: absolute;
+      top: -100%;
+      left: 1rem;
+      z-index: 9999;
+      padding: 0.75rem 1.5rem;
+      background: var(--color-accent);
+      color: var(--color-deep);
+      font-family: var(--font-sans);
+      font-size: 0.875rem;
+      font-weight: 600;
+      text-decoration: none;
+      border-radius: 2px;
+      transition: top 0.2s;
+    }
+
+    .skip-link:focus {
+      top: 1rem;
+    }
 
     /* Reduced motion */
     @media (prefers-reduced-motion: reduce) {
@@ -926,7 +1059,7 @@
       font-weight: 500;
       letter-spacing: 0.15em;
       text-transform: uppercase;
-      color: rgba(243, 237, 226, 0.35);
+      color: rgba(243, 237, 226, 0.6);
       margin-top: 0.35rem;
     }
 
@@ -1045,50 +1178,22 @@
       margin-bottom: 2.5rem;
     }
 
-    /* Flat grid: rovnaký grid riadok = rovnaká výška = bulletky vždy
-       v jednej línii. Card vizuál cez ::before / ::after pseudo-elementy. */
     .identify__groups {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      grid-template-rows: auto auto auto; /* top | divider | list */
-      column-gap: 1.5rem;
-      row-gap: 0;
-      position: relative;
+      gap: 1.5rem;
     }
 
-    /* Card backgrounds — pseudo-elementy pokrývajú celú výšku gridu */
-    .identify__groups::before,
-    .identify__groups::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      width: calc(50% - 0.75rem);
+    /* Karta — jeden ucelený element */
+    .identify__card {
       background: rgba(255, 255, 255, 0.58);
       border: 1px solid rgba(193, 154, 91, 0.15);
       border-radius: 12px;
-      pointer-events: none;
-      z-index: 0;
+      padding: 2rem 1.75rem 2rem;
     }
-
-    .identify__groups::before { left: 0; }
-    .identify__groups::after  { right: 0; }
-
-    /* Každá bunka musí byť nad pseudo-pozadím */
-    .identify__col--l,
-    .identify__col--r {
-      position: relative;
-      z-index: 1;
-    }
-
-    .identify__col--l { padding-left: 2rem;  padding-right: 1.5rem; }
-    .identify__col--r { padding-left: 1.5rem; padding-right: 2rem; }
-
-    /* Riadok 1 — top obsah */
-    .identify__col-top  { padding-top: 2.25rem; }
 
     /* Riadok 3 — zoznamy */
-    .identify__group-list { padding-bottom: 2rem; }
+    .identify__group-list { padding-bottom: 0; }
 
     .identify__group-label {
       display: block;
@@ -1163,21 +1268,10 @@
     @media (max-width: 640px) {
       .identify__groups {
         grid-template-columns: 1fr;
-        grid-template-rows: none;
       }
 
-      .identify__groups::before,
-      .identify__groups::after {
-        display: none;
-      }
-
-      .identify__col--l,
-      .identify__col--r {
-        background: rgba(255, 255, 255, 0.58);
-        border: 1px solid rgba(193, 154, 91, 0.15);
-        border-radius: 12px;
-        padding-left: 1.5rem;
-        padding-right: 1.5rem;
+      .identify__card {
+        padding: 1.5rem 1.25rem;
       }
     }
 
@@ -1304,7 +1398,16 @@
         border: none;
         padding: 0;
         cursor: pointer;
+        position: relative;
         transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        /* Rozšírenie klikateľnej plochy na 44×44px bez zmeny vizuálu */
+        -webkit-tap-highlight-color: transparent;
+      }
+
+      .approach__dot::before {
+        content: '';
+        position: absolute;
+        inset: -19px;
       }
 
       .approach__dot--active {
@@ -2187,7 +2290,7 @@
 
     .footer__tagline {
       font-size: 0.82rem;
-      color: rgba(243, 237, 226, 0.35);
+      color: rgba(243, 237, 226, 0.55);
     }
 
     .footer__right {
@@ -2430,7 +2533,7 @@
       font-weight: 500;
       letter-spacing: 0.1em;
       text-transform: uppercase;
-      color: rgba(243, 237, 226, 0.35);
+      color: rgba(243, 237, 226, 0.5);
       white-space: nowrap;
     }
 
@@ -2629,23 +2732,28 @@
       .hero__pretitle {
         font-size: 1rem;
         margin-bottom: 0.3rem;
+        /* Mobile: skrátená animačná oneskorenie pre rýchlejší FCP */
+        animation-delay: 0.05s;
       }
 
       .hero__title {
         font-size: clamp(2.2rem, 9vw, 3.2rem);
         margin-bottom: 1rem;
+        animation-delay: 0.15s;
       }
 
       .hero__subtitle {
         font-size: 0.9rem;
         margin-bottom: 2rem;
         line-height: 1.65;
+        animation-delay: 0.3s;
       }
 
       /* CTA buttons — full width stack */
       .hero__ctas {
         flex-direction: column;
         align-items: center;
+        animation-delay: 0.45s;
       }
 
       .hero__ctas .btn {
@@ -2659,6 +2767,7 @@
       .hero__stats {
         margin-top: 2.5rem;
         padding-top: 1.8rem;
+        animation-delay: 0.65s;
       }
 
       .hero__scroll-indicator {
@@ -2860,6 +2969,9 @@
 
 <body>
 
+  <!-- Skip navigation — keyboard accessibility -->
+  <a href="#main-content" class="skip-link">Preskočiť na obsah</a>
+
   <!-- Intro curtain -->
   <div class="intro-curtain" id="introCurtain" aria-hidden="true">
     <div style="text-align:center;">
@@ -2907,7 +3019,7 @@
     </div>
   </nav>
 
-  <main>
+  <main id="main-content">
     <!-- =============================================
          HERO SEKCIA
          ============================================= -->
@@ -2920,7 +3032,7 @@
 
       <div class="hero__content">
 <p class="hero__pretitle">Každý niekde začínal.</p>
-        <h1 class="hero__title">Ty môžeš <em>začať</em><br><span class="hero__title-accent">práve teraz.</span></h1>
+        <h1 class="hero__title"><span class="sr-only">Osobný tréner Bratislava — </span>Ty môžeš <em>začať</em><br><span class="hero__title-accent">práve teraz.</span></h1>
         <p class="hero__subtitle">Osobný silový tréning v&nbsp;Bratislave pre ľudí, ktorí chcú trénovať správne, napredovať a&nbsp;dosahovať viditeľné výsledky.</p>
         <div class="hero__ctas">
           <a href="#contact" class="btn btn--primary">Rezervuj bezplatnú konzultáciu</a>
@@ -2961,53 +3073,49 @@
 
           <div class="identify__groups">
 
-            <!-- Riadok 1: top obsah — oba v rovnakom grid riadku → rovnaká výška -->
-            <div class="identify__col-top identify__col--l reveal">
+            <!-- Karta 1: začiatočník -->
+            <div class="identify__card reveal">
               <span class="identify__group-label">Práve začínaš</span>
               <p class="identify__group-quote">Chceš začať — ale nevieš ako.</p>
               <p class="identify__group-detail">Nie je to o&nbsp;lenivosti. Je to o&nbsp;tom, že ti nikto neukázal, ako na to. Chceš to robiť správne — nie ďalší YouTube návod, nie generický plán. Chceš niekoho, kto ti povie presne: rob toto.</p>
+              <span class="identify__group-divider" aria-hidden="true"></span>
+              <ul class="identify__group-list">
+                <li class="identify__group-item">
+                  <svg class="identify__check" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><polyline points="4 10 8 14 16 6"/></svg>
+                  <span>Nikdy si pravidelne necvičil/a a nevieš, kde začať</span>
+                </li>
+                <li class="identify__group-item">
+                  <svg class="identify__check" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><polyline points="4 10 8 14 16 6"/></svg>
+                  <span>Chceš správnu techniku od základov — bez zbytočných chýb</span>
+                </li>
+                <li class="identify__group-item">
+                  <svg class="identify__check" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><polyline points="4 10 8 14 16 6"/></svg>
+                  <span>Potrebuješ niekoho, kto ťa prevedie trpezlivo a bez súdenia</span>
+                </li>
+              </ul>
             </div>
 
-            <div class="identify__col-top identify__col--r reveal reveal-delay-2">
+            <!-- Karta 2: pokročilý -->
+            <div class="identify__card reveal reveal-delay-2">
               <span class="identify__group-label">Chceš sa posunúť ďalej</span>
               <p class="identify__group-quote">Cvičíš — ale nič sa nemení.</p>
               <p class="identify__group-detail">Chodíš pravidelne, dávaš úsilie. Ale váha stojí, sila nerastie, motivácia sa vytráca. Problém nie je v&nbsp;úsilí&nbsp;— ale v&nbsp;pláne.</p>
+              <span class="identify__group-divider" aria-hidden="true"></span>
+              <ul class="identify__group-list">
+                <li class="identify__group-item">
+                  <svg class="identify__check" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><polyline points="4 10 8 14 16 6"/></svg>
+                  <span>Cvičíš, ale výsledky sa napriek úsiliu zastavili</span>
+                </li>
+                <li class="identify__group-item">
+                  <svg class="identify__check" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><polyline points="4 10 8 14 16 6"/></svg>
+                  <span>Cítiš, že niečo robíš zle — ale nevieš presne čo</span>
+                </li>
+                <li class="identify__group-item">
+                  <svg class="identify__check" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><polyline points="4 10 8 14 16 6"/></svg>
+                  <span>Chceš konkrétny plán a niekoho, kto za tebou stojí</span>
+                </li>
+              </ul>
             </div>
-
-            <!-- Riadok 2: oddeľovače — automaticky v jednej línii -->
-            <span class="identify__group-divider identify__col--l" aria-hidden="true"></span>
-            <span class="identify__group-divider identify__col--r" aria-hidden="true"></span>
-
-            <!-- Riadok 3: zoznamy — prvý bod vždy na rovnakej výške -->
-            <ul class="identify__group-list identify__col--l">
-              <li class="identify__group-item">
-                <svg class="identify__check" viewBox="0 0 20 20"><polyline points="4 10 8 14 16 6"/></svg>
-                <span>Nikdy si pravidelne necvičil/a a nevieš, kde začať</span>
-              </li>
-              <li class="identify__group-item">
-                <svg class="identify__check" viewBox="0 0 20 20"><polyline points="4 10 8 14 16 6"/></svg>
-                <span>Chceš správnu techniku od základov — bez zbytočných chýb</span>
-              </li>
-              <li class="identify__group-item">
-                <svg class="identify__check" viewBox="0 0 20 20"><polyline points="4 10 8 14 16 6"/></svg>
-                <span>Potrebuješ niekoho, kto ťa prevedie trpezlivo a bez súdenia</span>
-              </li>
-            </ul>
-
-            <ul class="identify__group-list identify__col--r">
-              <li class="identify__group-item">
-                <svg class="identify__check" viewBox="0 0 20 20"><polyline points="4 10 8 14 16 6"/></svg>
-                <span>Cvičíš, ale výsledky sa napriek úsiliu zastavili</span>
-              </li>
-              <li class="identify__group-item">
-                <svg class="identify__check" viewBox="0 0 20 20"><polyline points="4 10 8 14 16 6"/></svg>
-                <span>Cítiš, že niečo robíš zle — ale nevieš presne čo</span>
-              </li>
-              <li class="identify__group-item">
-                <svg class="identify__check" viewBox="0 0 20 20"><polyline points="4 10 8 14 16 6"/></svg>
-                <span>Chceš konkrétny plán a niekoho, kto za tebou stojí</span>
-              </li>
-            </ul>
 
           </div>
 
@@ -3086,15 +3194,16 @@
         </div>
 
         <!-- Carousel UI — viditeľné len na mobile -->
-        <div class="approach__carousel-ui" id="approachCarouselUi" aria-hidden="true">
-          <div class="approach__dots" id="approachDots" role="tablist">
-            <button class="approach__dot approach__dot--active" data-index="0" aria-label="Karta 1" aria-selected="true"></button>
-            <button class="approach__dot" data-index="1" aria-label="Karta 2" aria-selected="false"></button>
-            <button class="approach__dot" data-index="2" aria-label="Karta 3" aria-selected="false"></button>
-            <button class="approach__dot" data-index="3" aria-label="Karta 4" aria-selected="false"></button>
+        <div class="approach__carousel-ui" id="approachCarouselUi">
+          <div class="approach__dots" id="approachDots" role="tablist" aria-label="Navigácia kariet">
+            <button class="approach__dot approach__dot--active" role="tab" data-index="0" aria-label="Karta 1" aria-selected="true"></button>
+            <button class="approach__dot" role="tab" data-index="1" aria-label="Karta 2" aria-selected="false"></button>
+            <button class="approach__dot" role="tab" data-index="2" aria-label="Karta 3" aria-selected="false"></button>
+            <button class="approach__dot" role="tab" data-index="3" aria-label="Karta 4" aria-selected="false"></button>
           </div>
-          <div class="approach__swipe-hint" id="approachSwipeHint">
-            <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+          <!-- Vizuálny hint — len dekoratívny, pre screenreader skrytý -->
+          <div class="approach__swipe-hint" id="approachSwipeHint" aria-hidden="true">
+            <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
               <path d="M5 12h14M13 6l6 6-6 6"/>
             </svg>
             Potiahnite
@@ -3237,7 +3346,7 @@
             <div class="gallery__photo">
               <!-- <img src="foto-jakub-portret.jpg" alt="Jakub Boško — osobný tréner Bratislava" loading="lazy"> -->
               <div class="gallery__placeholder" style="--ph-bg: linear-gradient(155deg, #1a2619 0%, #243522 60%, #1f2e1d 100%);">
-                <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
                 <span class="gallery__placeholder-label">Foto trénera</span>
               </div>
             </div>
@@ -3250,7 +3359,10 @@
           <!-- Foto 2: Klient — HYROX -->
           <div class="gallery__item reveal reveal-delay-1">
             <div class="gallery__photo">
-              <img src="images/klient-hyrox.jpg" alt="Jakub Boško s klientom — HYROX fitness racing" loading="lazy" style="object-position: center 75%;">
+              <picture>
+                <source srcset="images/klient-hyrox.webp" type="image/webp">
+                <img src="images/klient-hyrox.jpg" alt="Jakub Boško s klientom — HYROX fitness racing" loading="lazy" decoding="async" width="1206" height="1484" style="object-position: center 75%;">
+              </picture>
             </div>
             <div class="gallery__caption-wrap">
               <span class="gallery__caption">HYROX</span>
@@ -3261,7 +3373,10 @@
           <!-- Foto 3: Klient — Tvrďák -->
           <div class="gallery__item reveal reveal-delay-2">
             <div class="gallery__photo">
-              <img src="images/klient-tvrdak.jpg" alt="Jakub Boško s klientom — Tvrďák obstacle race" loading="lazy" style="object-position: center 15%;">
+              <picture>
+                <source srcset="images/klient-tvrdak.webp" type="image/webp">
+                <img src="images/klient-tvrdak.jpg" alt="Jakub Boško s klientom — Tvrďák obstacle race" loading="lazy" decoding="async" width="1206" height="1303" style="object-position: center 15%;">
+              </picture>
             </div>
             <div class="gallery__caption-wrap">
               <span class="gallery__caption">Tvrďák</span>
@@ -3274,7 +3389,7 @@
             <div class="gallery__photo">
               <!-- <img src="foto-klient.jpg" alt="Klient na osobnom tréningu Bratislava" loading="lazy"> -->
               <div class="gallery__placeholder" style="--ph-bg: linear-gradient(100deg, #1a2619 0%, #243020 50%, #1f2c1e 100%);">
-                <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
                 <span class="gallery__placeholder-label">Tréning klienta</span>
               </div>
             </div>
@@ -3307,17 +3422,16 @@
           <div class="testimonial-card reveal reveal-delay-1">
             <div class="testimonial-card__quote-mark" aria-hidden="true">&ldquo;</div>
             <div class="testimonial-card__stars" aria-label="5 z 5 hviezdičiek">
-              <svg viewBox="0 0 16 16"><polygon points="8,1 10,6 16,6.5 11.5,10.5 13,16 8,13 3,16 4.5,10.5 0,6.5 6,6"/></svg>
-              <svg viewBox="0 0 16 16"><polygon points="8,1 10,6 16,6.5 11.5,10.5 13,16 8,13 3,16 4.5,10.5 0,6.5 6,6"/></svg>
-              <svg viewBox="0 0 16 16"><polygon points="8,1 10,6 16,6.5 11.5,10.5 13,16 8,13 3,16 4.5,10.5 0,6.5 6,6"/></svg>
-              <svg viewBox="0 0 16 16"><polygon points="8,1 10,6 16,6.5 11.5,10.5 13,16 8,13 3,16 4.5,10.5 0,6.5 6,6"/></svg>
-              <svg viewBox="0 0 16 16"><polygon points="8,1 10,6 16,6.5 11.5,10.5 13,16 8,13 3,16 4.5,10.5 0,6.5 6,6"/></svg>
+              <svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><polygon points="8,1 10,6 16,6.5 11.5,10.5 13,16 8,13 3,16 4.5,10.5 0,6.5 6,6"/></svg>
+              <svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><polygon points="8,1 10,6 16,6.5 11.5,10.5 13,16 8,13 3,16 4.5,10.5 0,6.5 6,6"/></svg>
+              <svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><polygon points="8,1 10,6 16,6.5 11.5,10.5 13,16 8,13 3,16 4.5,10.5 0,6.5 6,6"/></svg>
+              <svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><polygon points="8,1 10,6 16,6.5 11.5,10.5 13,16 8,13 3,16 4.5,10.5 0,6.5 6,6"/></svg>
+              <svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><polygon points="8,1 10,6 16,6.5 11.5,10.5 13,16 8,13 3,16 4.5,10.5 0,6.5 6,6"/></svg>
             </div>
-            <p class="testimonial-card__text">&ldquo;Nikdy som necvičil a mal som strach ísť do fitka sám. Dnes chodím 4&times; týždenne a viem presne, čo robím. Najlepšia investícia za posledné roky.&rdquo;</p>
+            <p class="testimonial-card__text">&ldquo;Bál som sa, že budem mimo. Jakub vysvetlil každý cvik, nikam sa neponáhľal. Za štyri mesiace vidím výsledky, ktoré som nečakal.&rdquo;</p>
             <div class="testimonial-card__author">
               <div class="testimonial-card__avatar">TK</div>
               <div>
-                <!-- UPRAVIŤ: Meno klienta -->
                 <div class="testimonial-card__name">Tomáš K.</div>
                 <div class="testimonial-card__meta">začiatočník &middot; 4 mesiace</div>
               </div>
@@ -3329,17 +3443,16 @@
           <div class="testimonial-card reveal reveal-delay-2">
             <div class="testimonial-card__quote-mark" aria-hidden="true">&ldquo;</div>
             <div class="testimonial-card__stars" aria-label="5 z 5 hviezdičiek">
-              <svg viewBox="0 0 16 16"><polygon points="8,1 10,6 16,6.5 11.5,10.5 13,16 8,13 3,16 4.5,10.5 0,6.5 6,6"/></svg>
-              <svg viewBox="0 0 16 16"><polygon points="8,1 10,6 16,6.5 11.5,10.5 13,16 8,13 3,16 4.5,10.5 0,6.5 6,6"/></svg>
-              <svg viewBox="0 0 16 16"><polygon points="8,1 10,6 16,6.5 11.5,10.5 13,16 8,13 3,16 4.5,10.5 0,6.5 6,6"/></svg>
-              <svg viewBox="0 0 16 16"><polygon points="8,1 10,6 16,6.5 11.5,10.5 13,16 8,13 3,16 4.5,10.5 0,6.5 6,6"/></svg>
-              <svg viewBox="0 0 16 16"><polygon points="8,1 10,6 16,6.5 11.5,10.5 13,16 8,13 3,16 4.5,10.5 0,6.5 6,6"/></svg>
+              <svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><polygon points="8,1 10,6 16,6.5 11.5,10.5 13,16 8,13 3,16 4.5,10.5 0,6.5 6,6"/></svg>
+              <svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><polygon points="8,1 10,6 16,6.5 11.5,10.5 13,16 8,13 3,16 4.5,10.5 0,6.5 6,6"/></svg>
+              <svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><polygon points="8,1 10,6 16,6.5 11.5,10.5 13,16 8,13 3,16 4.5,10.5 0,6.5 6,6"/></svg>
+              <svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><polygon points="8,1 10,6 16,6.5 11.5,10.5 13,16 8,13 3,16 4.5,10.5 0,6.5 6,6"/></svg>
+              <svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><polygon points="8,1 10,6 16,6.5 11.5,10.5 13,16 8,13 3,16 4.5,10.5 0,6.5 6,6"/></svg>
             </div>
-            <p class="testimonial-card__text">&ldquo;Stagnoval som rok a pol. Po troch mesiacoch som prekonal osobné maximá vo všetkých cvikoch. Konečne viem, prečo robím to, čo robím.&rdquo;</p>
+            <p class="testimonial-card__text">&ldquo;Rok som stagnovala a menila programy. Za tri mesiace s Jakubom nové maximum na drep — a konečne viem prečo.&rdquo;</p>
             <div class="testimonial-card__author">
               <div class="testimonial-card__avatar">LM</div>
               <div>
-                <!-- UPRAVIŤ: Meno klienta -->
                 <div class="testimonial-card__name">Lucia M.</div>
                 <div class="testimonial-card__meta">pokročilá &middot; 3 mesiace</div>
               </div>
@@ -3351,19 +3464,18 @@
           <div class="testimonial-card reveal reveal-delay-3">
             <div class="testimonial-card__quote-mark" aria-hidden="true">&ldquo;</div>
             <div class="testimonial-card__stars" aria-label="5 z 5 hviezdičiek">
-              <svg viewBox="0 0 16 16"><polygon points="8,1 10,6 16,6.5 11.5,10.5 13,16 8,13 3,16 4.5,10.5 0,6.5 6,6"/></svg>
-              <svg viewBox="0 0 16 16"><polygon points="8,1 10,6 16,6.5 11.5,10.5 13,16 8,13 3,16 4.5,10.5 0,6.5 6,6"/></svg>
-              <svg viewBox="0 0 16 16"><polygon points="8,1 10,6 16,6.5 11.5,10.5 13,16 8,13 3,16 4.5,10.5 0,6.5 6,6"/></svg>
-              <svg viewBox="0 0 16 16"><polygon points="8,1 10,6 16,6.5 11.5,10.5 13,16 8,13 3,16 4.5,10.5 0,6.5 6,6"/></svg>
-              <svg viewBox="0 0 16 16"><polygon points="8,1 10,6 16,6.5 11.5,10.5 13,16 8,13 3,16 4.5,10.5 0,6.5 6,6"/></svg>
+              <svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><polygon points="8,1 10,6 16,6.5 11.5,10.5 13,16 8,13 3,16 4.5,10.5 0,6.5 6,6"/></svg>
+              <svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><polygon points="8,1 10,6 16,6.5 11.5,10.5 13,16 8,13 3,16 4.5,10.5 0,6.5 6,6"/></svg>
+              <svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><polygon points="8,1 10,6 16,6.5 11.5,10.5 13,16 8,13 3,16 4.5,10.5 0,6.5 6,6"/></svg>
+              <svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><polygon points="8,1 10,6 16,6.5 11.5,10.5 13,16 8,13 3,16 4.5,10.5 0,6.5 6,6"/></svg>
+              <svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><polygon points="8,1 10,6 16,6.5 11.5,10.5 13,16 8,13 3,16 4.5,10.5 0,6.5 6,6"/></svg>
             </div>
-            <p class="testimonial-card__text">&ldquo;Čakala som, že budem len číslo. Namiesto toho mám pocit, že tréner pozná moje telo lepšie ako ja sama. Bez súdenia, s&nbsp;trpezlivosťou.&rdquo;</p>
+            <p class="testimonial-card__text">&ldquo;Chcela som schudnúť, nie len cvičiť. Jakub nastavil tréning aj stravu — za päť mesiacov mínus 9 kíl a postava, akú som nikdy nemala.&rdquo;</p>
             <div class="testimonial-card__author">
               <div class="testimonial-card__avatar">JR</div>
               <div>
-                <!-- UPRAVIŤ: Meno klienta -->
                 <div class="testimonial-card__name">Jana R.</div>
-                <div class="testimonial-card__meta">po pôrode &middot; 6 mesiacov</div>
+                <div class="testimonial-card__meta">redukcia hmotnosti &middot; 5 mesiacov</div>
               </div>
             </div>
           </div>
@@ -3390,13 +3502,13 @@
               <div class="form-group">
                 <label for="name">Meno</label>
                 <input type="text" id="name" name="name" placeholder="Tvoje meno" required autocomplete="name">
-                <p class="error-msg" id="nameError">Zadaj prosím svoje meno.</p>
+                <p class="error-msg" id="nameError" role="alert" aria-live="polite" aria-atomic="true">Zadaj prosím svoje meno.</p>
               </div>
 
               <div class="form-group">
                 <label for="email">Email</label>
                 <input type="email" id="email" name="email" placeholder="tvoj@email.sk" required autocomplete="email">
-                <p class="error-msg" id="emailError">Zadaj prosím platný email.</p>
+                <p class="error-msg" id="emailError" role="alert" aria-live="polite" aria-atomic="true">Zadaj prosím platný email.</p>
               </div>
 
 
@@ -3452,10 +3564,10 @@
         <div class="footer__right">
           <div class="footer__socials">
             <a href="https://wa.me/421950490512" class="footer__social-link" aria-label="WhatsApp" target="_blank" rel="noopener noreferrer">
-              <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
             </a>
             <a href="https://www.instagram.com/jakupos/" class="footer__social-link" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
-              <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
             </a>
           </div>
           <span class="footer__copy">&copy; 2026 Jakub Boško</span>
@@ -3488,10 +3600,10 @@
         setTimeout(function () {
           curtain.classList.add('exit');
           document.body.style.overflow = '';
-        }, 1200);
+        }, 400);
         setTimeout(function () {
           curtain.classList.add('done');
-        }, 1900);
+        }, 1000);
       }
 
       /* ----------------------------------------

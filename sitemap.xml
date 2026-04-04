@@ -1,9 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://www.trenerbratislava.sk/</loc>
-    <lastmod>2026-03-20</lastmod>
+    <lastmod>2026-04-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://www.trenerbratislava.sk/images/klient-hyrox.jpg</image:loc>
+      <image:title>Jakub Boško s klientom — HYROX fitness racing</image:title>
+      <image:caption>Kondičná príprava na výsledky — osobný tréner Jakub Boško s klientom na HYROX pretekoch v Bratislave</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.trenerbratislava.sk/images/klient-tvrdak.jpg</image:loc>
+      <image:title>Jakub Boško s klientom — Tvrďák obstacle race</image:title>
+      <image:caption>Osobný tréner Jakub Boško so svojím klientom na Tvrďák obstacle race pretekoch — výsledok silového tréningu v Bratislave</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.trenerbratislava.sk/images/og-image.jpg</image:loc>
+      <image:title>Jakub Boško — Osobný tréner Bratislava</image:title>
+      <image:caption>Jakub Boško, certifikovaný osobný tréner v Bratislave — individuálny silový tréning na mieru</image:caption>
+    </image:image>
   </url>
 </urlset>
