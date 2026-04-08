@@ -2,6 +2,16 @@
 <html lang="sk">
 <head>
   <meta charset="UTF-8">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PN215FZCHQ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-PN215FZCHQ');
+  </script>
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="color-scheme" content="dark light">
   <meta name="theme-color" content="#1a2619">
@@ -47,9 +57,11 @@
   <meta name="twitter:image" content="https://www.trenerbratislava.sk/images/og-image.jpg">
   <meta name="twitter:image:alt" content="Jakub Boško — Osobný tréner Bratislava">
 
-  <!-- Favicon — SVG inline, žiadne externé súbory -->
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%231a2619'/><text x='16' y='23' text-anchor='middle' font-family='Georgia,serif' font-size='17' font-weight='600' fill='%23c19a5b'>JB</text></svg>">
-  <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%231a2619'/><text x='16' y='23' text-anchor='middle' font-family='Georgia,serif' font-size='17' font-weight='600' fill='%23c19a5b'>JB</text></svg>">
+  <!-- Favicon -->
+  <link rel="icon" href="/favicon.ico" sizes="48x48">
+  <link rel="icon" href="/images/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="/images/favicon-48x48.png" sizes="48x48" type="image/png">
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
 
   <!-- Self-hosted fonty — žiadne externé DNS lookup, okamžité načítanie -->
   <!-- Preload kritických fontov (nad záhybom: headings + body) -->
@@ -3277,26 +3289,26 @@
 
           <div class="services__item reveal reveal-delay-1">
             <span class="services__number">02</span>
-            <h3 class="services__name">Kondičná príprava</h3>
-            <p class="services__desc">Všeobecná fyzická zdatnosť pre šport, zdravie aj každodenný život. Vytrvalosť, sila, pohyblivosť — komplex.</p>
-          </div>
-
-          <div class="services__item reveal reveal-delay-2">
-            <span class="services__number">03</span>
-            <h3 class="services__name">Rozvoj maximálnej sily</h3>
-            <p class="services__desc">Špeciálny program pre tých, ktorí chcú posúvať hranice — s dôrazom na periodizáciu a bezpečnosť.</p>
-          </div>
-
-          <div class="services__item reveal">
-            <span class="services__number">04</span>
             <h3 class="services__name">Naberanie svalovej hmoty</h3>
             <p class="services__desc">Cielený program pre hypertrofiu — silové metódy, objem tréningu, výživa a regenerácia v jednom systéme.</p>
           </div>
 
-          <div class="services__item reveal reveal-delay-1">
-            <span class="services__number">05</span>
+          <div class="services__item reveal reveal-delay-2">
+            <span class="services__number">03</span>
             <h3 class="services__name">Redukcia hmotnosti</h3>
             <p class="services__desc">Udržateľné chudnutie bez straty svalovej hmoty. Žiadne drastické diéty — iba to, čo dlhodobo funguje.</p>
+          </div>
+
+          <div class="services__item reveal">
+            <span class="services__number">04</span>
+            <h3 class="services__name">Kondičná príprava</h3>
+            <p class="services__desc">Všeobecná fyzická zdatnosť pre šport, zdravie aj každodenný život. Vytrvalosť, sila, pohyblivosť — komplex.</p>
+          </div>
+
+          <div class="services__item reveal reveal-delay-1">
+            <span class="services__number">05</span>
+            <h3 class="services__name">Rozvoj maximálnej sily</h3>
+            <p class="services__desc">Špeciálny program pre tých, ktorí chcú posúvať hranice — s dôrazom na periodizáciu a bezpečnosť.</p>
           </div>
 
           <div class="services__item reveal reveal-delay-2">
@@ -3308,7 +3320,7 @@
           <div class="services__item reveal">
             <span class="services__number">07</span>
             <h3 class="services__name">Príprava na súťaže</h3>
-            <p class="services__desc">Špeciálna príprava pre fitness a kulturistiku — peaking, predťažobný tréning, staging a diétna fáza.</p>
+            <p class="services__desc">HYROX, obstacle race, behy aj fitness súťaže — cielená kondičná a silová príprava na deň D, aby si na štarte vedel, že si pripravený.</p>
           </div>
 
           <div class="services__item reveal reveal-delay-1">
@@ -3600,10 +3612,10 @@
         setTimeout(function () {
           curtain.classList.add('exit');
           document.body.style.overflow = '';
-        }, 400);
+        }, 1800);
         setTimeout(function () {
           curtain.classList.add('done');
-        }, 1000);
+        }, 2600);
       }
 
       /* ----------------------------------------
