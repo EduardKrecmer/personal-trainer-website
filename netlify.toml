@@ -38,6 +38,13 @@
   [headers.values]
     Cache-Control = "public, max-age=0, must-revalidate"
 
+# Cache — cookie consent script (stredne dlhý cache, pri zmene bumpneme query)
+[[headers]]
+  for = "/cookie-consent.js"
+  [headers.values]
+    Cache-Control = "public, max-age=86400, must-revalidate"
+    Content-Type = "application/javascript; charset=utf-8"
+
 # Cache — XML/TXT statické súbory
 [[headers]]
   for = "/sitemap.xml"

@@ -1,0 +1,11 @@
+# macOS metadata
+.DS_Store
+**/.DS_Store
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+
+# Lokálne referenčné materiály (neposielané na produkciu)
+google material web trenerbratislava.sk/

@@ -23,6 +23,7 @@
   <meta property="og:image" content="https://www.trenerbratislava.sk/images/og-image.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Jakub Boško — Osobný tréner Bratislava">
   <meta property="article:published_time" content="2026-04-15">
   <meta property="article:modified_time" content="2026-04-15">
   <meta property="article:author" content="Jakub Boško">
@@ -32,6 +33,7 @@
   <meta name="twitter:title" content="Koľko stojí osobný tréner v Bratislave? (2026)">
   <meta name="twitter:description" content="Úprimný prehľad cien osobného trénera v Bratislave — čo ovplyvňuje cenu a ako rozpoznať dobrého trénera.">
   <meta name="twitter:image" content="https://www.trenerbratislava.sk/images/og-image.jpg">
+  <meta name="twitter:image:alt" content="Jakub Boško — Osobný tréner Bratislava">
 
   <!-- Favicon -->
   <link rel="icon" href="/favicon.ico" sizes="48x48">
@@ -45,13 +47,25 @@
   <link rel="stylesheet" href="/fonts/fonts.css">
   <link rel="stylesheet" href="/blog/blog.css">
 
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PN215FZCHQ"></script>
+  <!-- ★ Google Consent Mode v2 — default DENIED (GDPR/ePrivacy) -->
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      'ad_storage': 'denied',
+      'ad_user_data': 'denied',
+      'ad_personalization': 'denied',
+      'analytics_storage': 'denied',
+      'functionality_storage': 'granted',
+      'security_storage': 'granted',
+      'wait_for_update': 500
+    });
+  </script>
+  <!-- Google tag (gtag.js) — spúšťa sa iba s platným súhlasom (Consent Mode) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PN215FZCHQ"></script>
+  <script>
     gtag('js', new Date());
-    gtag('config', 'G-PN215FZCHQ');
+    gtag('config', 'G-PN215FZCHQ', { 'anonymize_ip': true });
   </script>
 
   <!-- Structured data -->
@@ -285,9 +299,13 @@
     <div class="container">
       <div>&copy; 2026 Jakub Boško — <a href="/">Osobný tréner Bratislava</a></div>
       <address class="blog-footer__nap">
-        FITINN Kamenné námestie 1, 811 06 Bratislava – Staré Mesto · +421 950 490 512
+        FITINN Kamenné námestie 1, 811 06 Bratislava – Staré Mesto · <a href="tel:+421950490512">+421 950 490 512</a>
       </address>
+      <button type="button" class="blog-footer__cookie-btn" data-cookie-settings aria-label="Otvoriť nastavenia cookies">Nastavenia cookies</button>
     </div>
   </footer>
+
+  <!-- Cookie consent (GDPR) + Google Consent Mode bridge -->
+  <script src="/cookie-consent.js" defer></script>
 </body>
 </html>

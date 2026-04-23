@@ -3,13 +3,25 @@
 <head>
   <meta charset="UTF-8">
 
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PN215FZCHQ"></script>
+  <!-- ★ Google Consent Mode v2 — default DENIED, kým používateľ nedá súhlas (GDPR/ePrivacy) -->
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      'ad_storage': 'denied',
+      'ad_user_data': 'denied',
+      'ad_personalization': 'denied',
+      'analytics_storage': 'denied',
+      'functionality_storage': 'granted',
+      'security_storage': 'granted',
+      'wait_for_update': 500
+    });
+  </script>
+  <!-- Google tag (gtag.js) — spúšťa sa iba s platným súhlasom (Consent Mode) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PN215FZCHQ"></script>
+  <script>
     gtag('js', new Date());
-    gtag('config', 'G-PN215FZCHQ');
+    gtag('config', 'G-PN215FZCHQ', { 'anonymize_ip': true });
   </script>
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,8 +34,7 @@
 
   <!-- ★ SEO: Primary meta -->
   <title>Osobný tréner Bratislava | Jakub Boško — Silový tréning na mieru</title>
-  <meta name="description" content="Osobný tréner v Bratislave (Staré Mesto, FITINN Kamenné nám.) — individuálny silový tréning na mieru pre začiatočníkov aj pokročilých. English speaking. Prvá konzultácia zdarma. WhatsApp: 0950 490 512.">
-  <meta name="keywords" content="tréner, tréner Bratislava, osobný tréner, osobný tréner Bratislava, osobný tréner Staré Mesto, tréner Staré Mesto, silový tréner Bratislava, silový tréning Bratislava, fitness tréner Bratislava, kondičný tréner Bratislava, personálny tréner Bratislava, súkromný tréner Bratislava, funkčný tréning Bratislava, kondičná príprava Bratislava, naberanie svalovej hmoty Bratislava, redukcia hmotnosti tréner Bratislava, chudnutie tréner Bratislava, rozvoj maximálnej sily, tréningový plán na mieru, tréner pre začiatočníkov Bratislava, tréner pre ženy Bratislava, tréner v mojom okolí, najlepší tréner Bratislava, osobný tréner cena Bratislava, Jakub Boško, FITINN Kamenné námestie, personal trainer Bratislava, personal trainer near me, personal trainer Old Town Bratislava, English speaking personal trainer Bratislava, strength coach Bratislava, fitness trainer Bratislava, gym trainer Bratislava">
+  <meta name="description" content="Osobný tréner Bratislava (FITINN Kamenné nám., Staré Mesto) — silový tréning na mieru pre začiatočníkov aj pokročilých. English speaking. Prvá konzultácia zdarma.">
   <meta name="author" content="Jakub Boško">
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
 
@@ -48,8 +59,6 @@
   <meta property="og:description" content="Individuálny silový tréning v Bratislave (FITINN Kamenné nám., Staré Mesto) pre začiatočníkov aj pokročilých. English speaking. Prvá konzultácia zdarma.">
   <meta property="og:site_name" content="Jakub Boško — Osobný tréner Bratislava">
   <meta property="og:url" content="https://www.trenerbratislava.sk/">
-  <meta property="og:locality" content="Bratislava – Staré Mesto">
-  <meta property="og:country-name" content="Slovakia">
   <meta property="og:image" content="https://www.trenerbratislava.sk/images/og-image.jpg">
   <meta property="og:image:secure_url" content="https://www.trenerbratislava.sk/images/og-image.jpg">
   <meta property="og:image:type" content="image/jpeg">
@@ -103,7 +112,7 @@
         "about": { "@id": "https://www.trenerbratislava.sk/#business" },
         "author": { "@id": "https://www.trenerbratislava.sk/#trainer" },
         "datePublished": "2026-03-20",
-        "dateModified": "2026-04-15",
+        "dateModified": "2026-04-23",
         "primaryImageOfPage": {
           "@type": "ImageObject",
           "url": "https://www.trenerbratislava.sk/images/og-image.jpg",
@@ -156,7 +165,7 @@
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "Kamenné námestie 1",
-          "postalCode": "81106",
+          "postalCode": "811 06",
           "addressLocality": "Bratislava – Staré Mesto",
           "addressCountry": "SK",
           "addressRegion": "Bratislavský kraj"
@@ -167,7 +176,7 @@
           "address": {
             "@type": "PostalAddress",
             "streetAddress": "Kamenné námestie 1",
-            "postalCode": "81106",
+            "postalCode": "811 06",
             "addressLocality": "Bratislava – Staré Mesto",
             "addressCountry": "SK"
           }
@@ -177,7 +186,7 @@
           "latitude": "48.144300",
           "longitude": "17.114100"
         },
-        "hasMap": "https://www.google.com/maps/search/?api=1&query=FITINN+Kamenn%C3%A9+n%C3%A1mestie+Bratislava",
+        "hasMap": "https://share.google/5hYwpJhLHztNqX05v",
         "availableLanguage": ["sk", "en"],
         "openingHoursSpecification": [
           {
@@ -231,6 +240,7 @@
           }
         ],
         "sameAs": [
+          "https://share.google/5hYwpJhLHztNqX05v",
           "https://www.instagram.com/jakupos/"
         ],
         "hasOfferCatalog": {
@@ -347,7 +357,10 @@
           }
         ],
         "knowsLanguage": ["sk", "en"],
-        "sameAs": ["https://www.instagram.com/jakupos/"],
+        "sameAs": [
+          "https://share.google/5hYwpJhLHztNqX05v",
+          "https://www.instagram.com/jakupos/"
+        ],
         "knowsAbout": [
           "silový tréning", "kondičná príprava", "fyziológia športu", "periodizácia",
           "progresívna záťaž", "korekcia techniky", "strength training",
@@ -2506,6 +2519,42 @@
       color: rgba(243, 237, 226, 0.55);
     }
 
+    .footer__nap {
+      font-style: normal;
+      font-size: 0.78rem;
+      line-height: 1.55;
+      color: rgba(243, 237, 226, 0.45);
+      margin-top: 0.35rem;
+    }
+
+    .footer__nap a {
+      color: inherit;
+      text-decoration: none;
+      transition: color 0.3s var(--ease-luxury);
+    }
+
+    .footer__nap a:hover {
+      color: var(--color-accent);
+    }
+
+    .footer__cookie-btn {
+      background: none;
+      border: none;
+      padding: 0;
+      margin-top: 0.4rem;
+      font: inherit;
+      font-size: 0.75rem;
+      color: rgba(243, 237, 226, 0.35);
+      cursor: pointer;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      transition: color 0.3s var(--ease-luxury);
+    }
+
+    .footer__cookie-btn:hover {
+      color: var(--color-accent);
+    }
+
     .footer__right {
       display: flex;
       align-items: center;
@@ -3242,7 +3291,7 @@
             <div class="hero__stat-label">Klientov</div>
           </div>
           <div class="hero__stat">
-            <div class="hero__stat-number">4.9</div>
+            <div class="hero__stat-number">5.0</div>
             <div class="hero__stat-label">Hodnotenie</div>
           </div>
           <div class="hero__stat">
@@ -3265,6 +3314,7 @@
 
           <div class="identify__heading reveal">
             <p class="section-label section-label--dark">Pre koho to je</p>
+            <h2 class="sr-only">Pre koho je osobný tréner v Bratislave</h2>
           </div>
 
           <div class="identify__groups">
@@ -3512,6 +3562,7 @@
 
         <div class="gallery__header reveal">
           <p class="section-label section-label--light">Momenty</p>
+          <h2 class="sr-only">Fotogaléria — tréningy a klienti v Bratislave</h2>
           <p class="gallery__intro">Reálne tréningy. Reálni ľudia.</p>
         </div>
 
@@ -3735,6 +3786,11 @@
         <div class="footer__brand">
           <span class="footer__name">Jakub Boško</span>
           <span class="footer__tagline">Osobný silový tréning &middot; Bratislava</span>
+          <address class="footer__nap">
+            FITINN Kamenné námestie 1, 811 06 Bratislava – Staré Mesto<br>
+            <a href="tel:+421950490512">+421 950 490 512</a>
+          </address>
+          <button type="button" class="footer__cookie-btn" data-cookie-settings aria-label="Otvoriť nastavenia cookies">Nastavenia cookies</button>
         </div>
 
         <div class="footer__right">
@@ -4157,6 +4213,8 @@
     })();
   </script>
 
+  <!-- Cookie consent (GDPR) + Google Consent Mode bridge — spoločný pre celý web -->
+  <script src="/cookie-consent.js" defer></script>
 
 </body>
 </html>

@@ -408,3 +408,21 @@ img { max-width: 100%; height: auto; display: block; }
   color: rgba(243, 237, 226, 0.5);
   font-size: 0.8rem;
 }
+
+.blog-footer__cookie-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  margin-top: 0.7rem;
+  font: inherit;
+  font-size: 0.78rem;
+  color: rgba(243, 237, 226, 0.4);
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color 0.3s ease;
+}
+
+.blog-footer__cookie-btn:hover {
+  color: var(--color-accent);
+}
